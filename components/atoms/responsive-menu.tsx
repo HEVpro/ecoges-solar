@@ -11,7 +11,7 @@ const ResponsiveMenu = ({edit, setEdit}: ResponsiveMenu) => {
                         <div
                             className="absolute flex flex-col items-center place-content-evenly z-50 transform translate-y-16 -translate-x-14 p-2 w-auto bg-softGreen rounded-md text-white sm:translate-x-10">
                             {Data.navbar.map((item: string, index: any) =>
-                                <Link key={index} href={"#"+item}>
+                                <Link key={index} href={"#"+item} >
                                     <a className="font-Barlow text-2xl my-3 font-medium px-4">{item}</a>
                                 </Link>
                             )}

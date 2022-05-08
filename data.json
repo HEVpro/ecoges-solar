@@ -1,6 +1,6 @@
 {
   "pageTitle": "Ecoges Solar",
-  "navbar": ["Nosotros", "Valores", "Contacto"],
+  "navbar": ["Nosotros", "Certificación", "Ayudas", "Valores"],
   "hero": {
     "title": "Calcula tu propio presupuesto online",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
@@ -12,12 +12,12 @@
   },
   "about": {
     "first": {
-      "title": "Protect Our Earth Agains Climate Change",
+      "title": "Nos encargamos de todo (llave en mano)",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "extra": "Read more"
     },
     "second": {
-      "title": "Together We Can Restore Our Planet",
+      "title": "Tramitamos las ayudas europeas NEXT GEN",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "extra": "Read more"
     },
