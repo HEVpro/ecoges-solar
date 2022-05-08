@@ -2,7 +2,7 @@
   "pageTitle": "Ecoges Solar",
   "navbar": ["Nosotros", "Valores", "Contacto"],
   "hero": {
-    "title": "Crea tu propio presupuesto online",
+    "title": "Calcula tu propio presupuesto online",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     "button": "Calcular"
   },
