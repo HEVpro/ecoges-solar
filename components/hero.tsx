@@ -21,24 +21,14 @@ const Hero = () => {
                 </video>
             </div>
             <div className="hidden sm:block w-screen lg:hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    src={"/video.mp4"}
-                    className="rounded-bl-[85px]"
-                />
+                <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
+                    <source src='/video.mp4' type='video/mp4' />
+                </video>
             </div>
             <div className="hidden lg:block w-screen">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    src={"/video-cut.mp4"}
-                    className="rounded-bl-[85px]"
-                />
+                <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
+                    <source src='/video-cut.mp4' type='video/mp4' />
+                </video>
             </div>
         </div>
     )
