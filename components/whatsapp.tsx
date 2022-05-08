@@ -11,7 +11,7 @@ const Whatsapp = () => {
         router.push(contactUrl)
     }
     return (
-            <div className="fixed bottom-40 right-16 z-50 mt-10 sm:hidden bg-transparent">
+            <div className="fixed bottom-16 right-10 z-50 sm:hidden bg-transparent">
                 <button onClick={handleContact} className="w-16 h-16 bg-softGreen rounded-full flex items-center justify-center text-white p-3">
                     <FontAwesomeIcon icon={faWhatsapp}/>
                 </button>
