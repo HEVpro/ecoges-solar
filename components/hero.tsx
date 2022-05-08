@@ -17,19 +17,23 @@ const Hero = () => {
             </div>
             <div className="w-screen sm:hidden">
                 <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
-                    <source src='/video-mobile.mp4' type='video/mp4' />
+                    <source src='/video-mobile.mp4' type='video/mp4' media="all"/>
+                    <source src='/video-mobile.webm' type='video/webm' media="all"/>
                 </video>
             </div>
             <div className="hidden sm:block w-screen lg:hidden">
                 <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
-                    <source src='/video.mp4' type='video/mp4' />
+                    <source src='/video.mp4' type='video/mp4' media="all" />
+                    <source src='/video.webm' type='video/webm' media="all" />
                 </video>
             </div>
-            <div className="hidden lg:block w-screen">
+            <div className="hidden  lg:inline w-screen">
                 <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
-                    <source src='/video-cut.mp4' type='video/mp4' />
+                    <source src='/video-cut.mp4' type='video/mp4'/>
+                    <source src='/video-cut.webm' type='video/webm' />
                 </video>
             </div>
+
         </div>
     )
 }
