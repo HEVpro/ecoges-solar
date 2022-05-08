@@ -28,7 +28,6 @@ const Navbar = () => {
                     </a>
                 </Link>
             </div>
-
             <div className="hidden lg:block w-1/3  flex justify-between text-white">
                 {Data.navbar.map((x, index) => {
                     return (
