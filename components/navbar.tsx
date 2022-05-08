@@ -6,6 +6,7 @@ import Link from "next/link";
 import PrimaryButton from "./atoms/button";
 import ResponsiveMenu from "./atoms/responsive-menu";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faWhatsapp} from "@fortawesome/free-brands-svg-icons";
 
 
 const icons = require("@fortawesome/free-solid-svg-icons")
@@ -20,7 +21,7 @@ const Navbar = () => {
         menuResponsive ? setMenuResponsive(false) : setMenuResponsive(true)
     }
     return (
-        <nav className="z-30 w-full bg-darkGreen flex items-center justify-evenly sm:justify-between py-2 px-6 font-Barlow relative text-white">
+        <nav className="z-50 w-full bg-darkGreen flex items-center justify-evenly sm:justify-between py-2 px-6 font-Barlow relative text-white">
             <div className="ml-0 md:ml-28">
                 <Link href="/">
                     <a>
@@ -39,6 +40,9 @@ const Navbar = () => {
             </div>
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive} />
             <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]} /></button>
+            {/*<button className="block w-10 h-10 bg-softGreen rounded-full flex items-center justify-center text-white p-3 sm:hidden">*/}
+            {/*    <FontAwesomeIcon icon={faWhatsapp}/>*/}
+            {/*</button>*/}
             <PrimaryButton target="#Contacto" content="Contacto" classname="mr-0 md:mr-8 hidden sm:block"/>
         </nav>
     )

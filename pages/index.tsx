@@ -15,7 +15,7 @@ import Whatsapp from "../components/whatsapp";
 
 const Home: NextPage = () => {
     return (
-        <div className="flex flex-col justify-end">
+        <div className="flex flex-col justify-items-end">
             <Head>
                 <title>{Data.pageTitle}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
