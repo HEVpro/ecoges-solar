@@ -1,0 +1,72 @@
+{
+  "pageTitle": "Ecoges Solar",
+  "navbar": ["Nosotros", "Valores", "Contacto"],
+  "hero": {
+    "title": "Lets maker our Earth Green and Clean",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "button": "Start today"
+  },
+  "header": {
+    "title": "Solución integral fotovoltaica",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+  },
+  "about": {
+    "first": {
+      "title": "Protect Our Earth Agains Climate Change",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      "extra": "Read more"
+    },
+    "second": {
+      "title": "Together We Can Restore Our Planet",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      "extra": "Read more"
+    },
+    "id": "Nosotros"
+  },
+  "mission": {
+    "Title": "Our Mission to Save the Planet",
+    "id": "Valores",
+    "Cards": [
+      {
+        "title": "Recycling",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "icon": "faBars"
+      },
+      {
+        "title": "Plant Trees",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "icon": "faBars"
+      },
+      {
+        "title": "Clean energy",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "icon": "faBars"
+      },
+      {
+        "title": "EcoSystem",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "icon": "faBars"
+      },
+      {
+        "title": "Solar System",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "icon": "faBars"
+      },
+      {
+        "title": "Water Refine",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "icon": "faBars"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "street": "Calle valencia, 24",
+    "address": "12312 Valencia, España",
+    "phone": "+34 622 222 222",
+    "email": "test@test.com",
+    "id": "Contacto",
+    "policy": "Haciendo click acepta la política de privacidad. Que puede leer en "
+  }
+}
