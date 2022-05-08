@@ -16,14 +16,9 @@ const Hero = () => {
 
             </div>
             <div className="w-screen sm:hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    src={"/video-mobile.mp4"}
-                    className="rounded-bl-[85px]"
-                />
+                <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
+                    <source src='/video-mobile.mp4' type='video/mp4' />
+                </video>
             </div>
             <div className="hidden sm:block w-screen lg:hidden">
                 <video
