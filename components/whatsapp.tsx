@@ -10,7 +10,7 @@ const Whatsapp = () => {
         router.push(contactUrl)
     }
     return (
-            <div className="fixed bottom-10 right-12 z-40 sm:hidden bg-transparent">
+            <div className="fixed bottom-8 right-8 z-40 sm:hidden bg-transparent">
                 <button onClick={handleContact} className="w-16 h-16 z-50 bg-softGreen rounded-full flex items-center justify-center text-white p-2">
                     <Image
                         src={"/whatsapp.png"}
