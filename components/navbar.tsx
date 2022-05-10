@@ -1,11 +1,12 @@
 import Data from '../data.json';
-import {useState} from "react";
+import {FormEvent, useEffect, useState} from "react";
 import Logo from '../public/ecoges-logo.png'
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryButton from "./atoms/button";
 import ResponsiveMenu from "./atoms/responsive-menu";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Languages from "./atoms/languages";
 
 
 const icons = require("@fortawesome/free-solid-svg-icons")
@@ -19,9 +20,10 @@ const Navbar = () => {
     const handleResponsiveMenu = () =>{
         menuResponsive ? setMenuResponsive(false) : setMenuResponsive(true)
     }
+
     return (
         <nav className="z-50 w-full bg-darkGreen flex items-center justify-evenly sm:justify-between py-2 px-6 font-Barlow relative text-white">
-            <div className="ml-0 md:ml-28">
+            <div className="ml-0 mr-4 md:ml-28">
                 <Link href="/">
                     <a>
                         <Image src={Logo} width={200} height={62}/>
@@ -36,6 +38,9 @@ const Navbar = () => {
                         </Link>
                     )
                 })}
+            </div>
+            <div>
+                <Languages />
             </div>
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive} />
             <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]} /></button>

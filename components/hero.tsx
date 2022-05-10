@@ -1,20 +1,22 @@
 import Data from '../data.json';
-
-import PrimaryButton from "./atoms/button";
+import {useTranslation} from "next-i18next";
+import {useRouter} from "next/router";
 
 const Hero = () => {
+    const router = useRouter()
+    const { t } = useTranslation('common');
     return (
         <div className="relative">
             <div
-                className="absolute z-30 text-2xl text-white bg-opacity-60 bg-gray-800 w-full h-full rounded-bl-[85px]"
+                className="absolute z-30 text-2xl text-white bg-opacity-40 bg-gray-800 w-full h-full rounded-bl-[85px]"
             >
                 <div className="flex flex-col pt-10 px-8 w-full text-center items-center sm:pt-4 lg:pt-10">
-                    <h1 className="text-white text-4xl sm:text-6xl font-semibold w-[16ch] leading-tight font-Inter mt-10 sm:mt-0 lg:mt-10">{Data.hero.title}</h1>
-                    <h1 className="text-white text-md  w-[30ch] sm:w-[50ch] my-6">{Data.hero.description}</h1>
-                    <button className="w-full mx-8 h-14 border-2 border-white rounded-[25px] font-bold mt-10 sm:w-72 ">{Data.hero.button}</button>
+                    <h1 className="text-white text-4xl sm:text-6xl font-semibold w-[16ch] leading-tight font-Inter mt-10 sm:mt-20 lg:mt-10">{t('hero-title')}</h1>
+                    <button className="w-full mx-8 h-14 border-2 border-white rounded-[25px] font-bold mt-10 sm:w-72 ">{t('hero-button')}</button>
                 </div>
 
             </div>
+            {/*TODO: CUT VIDEO WITHOUT DESCRIPTION*/}
             <div className="w-screen sm:hidden">
                 <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
                     <source src='/video-mobile.mp4' type='video/mp4' media="all"/>
