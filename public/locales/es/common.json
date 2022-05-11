@@ -1,4 +1,75 @@
 {
+  "navbar-footer": [
+    {
+      "name": "Nosotros",
+      "link": "us"
+    },
+    {
+      "name": "Ayudas",
+      "link": "aids"
+    },
+    {
+      "name": "Equipamiento",
+      "link": "equipment"
+    },
+    {
+      "name": "Misión",
+      "link": "mission"
+    },
+    {
+      "name": "Contacto",
+      "link": "contact"
+    }
+  ],
   "hero-title": "Calcula tu propio presupuesto online",
-  "hero-button": "Calcular"
+  "hero-button": "Calcular",
+  "us-title": "Solución integral fotovoltaica",
+  "us-description": "Nos encargamos de todo",
+  "aids": "Tramitamos las ayudas europeas NEXT GEN",
+  "equipment": "Instalamos todo tipo de equipos con primeras marcas",
+  "mission": "Nuestra misión, tu ahorro y salvar el planeta",
+  "cards": [
+    {
+      "title": "Ahorro",
+      "description": "Hasta un -70% en tu factura",
+      "icon": "faPiggyBank"
+    },
+    {
+      "title": "Ecológico",
+      "description": "0% emisiones",
+      "icon": "faLeaf"
+    },
+    {
+      "title": "Renovable",
+      "description": "Energía 100% limpia",
+      "icon": "faRepeat"
+    },
+    {
+      "title": "Económico",
+      "description": "Amortizable en poco tiempo",
+      "icon": "faEuroSign"
+    },
+    {
+      "title": "High tech",
+      "description": "Equipos de última generación",
+      "icon": "faMicrochip"
+    },
+    {
+      "title": "Post-venta",
+      "description": "Contacto directo",
+      "icon": "faUserCheck"
+    }
+  ],
+  "contact": "Contacto",
+  "placeholders": [
+    "Nombre",
+    "Email",
+    "Teléfono",
+    "Mensaje"
+  ],
+  "privacy-message": "Haciendo click acepta la política de privacidad. Que puede leer en",
+  "privacy-policy": "Política de privacidad",
+  "send": "Enviar",
+  "error-message": "Algo ha ido mal, vuelva a intentarlo",
+  "success-message": "Correo enviado correctamente, en breves nos pondremos en contacto contigo"
 }

@@ -7,6 +7,8 @@ import PrimaryButton from "./atoms/button";
 import ResponsiveMenu from "./atoms/responsive-menu";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Languages from "./atoms/languages";
+import {useRouter} from "next/router";
+import {useTranslation} from "next-i18next";
 
 
 const icons = require("@fortawesome/free-solid-svg-icons")
@@ -14,12 +16,23 @@ const icons = require("@fortawesome/free-solid-svg-icons")
 const myIcons = [
     {name: "test", icon: "faBars"}
 ]
+interface Navbar{
+    name: string;
+    link: string;
+}
 
 const Navbar = () => {
     const [menuResponsive, setMenuResponsive] = useState<boolean>(false)
     const handleResponsiveMenu = () =>{
         menuResponsive ? setMenuResponsive(false) : setMenuResponsive(true)
     }
+    const [navbar, setNavbar] = useState<Navbar[]>([])
+    const router = useRouter()
+    const { t } = useTranslation('common');
+
+    useEffect(() => {
+        setNavbar(t('navbar-footer', {returnObjects:true}))
+    },[router.locale])
 
     return (
         <nav className="z-50 w-full bg-darkGreen flex items-center justify-evenly sm:justify-between py-2 px-6 font-Barlow relative text-white">
@@ -31,10 +44,10 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="hidden lg:block w-1/3  flex justify-between text-white">
-                {Data.navbar.map((x, index) => {
+                {navbar.map((x, index) => {
                     return (
-                        <Link key={index} href={"#"+x}>
-                            <a className="mx-6 hover:text-white hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x}</a>
+                        <Link key={index} href={"#"+x.link}>
+                            <a className="mx-6 hover:text-white hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x.name}</a>
                         </Link>
                     )
                 })}

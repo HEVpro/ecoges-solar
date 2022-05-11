@@ -1,10 +1,10 @@
-import Data from '../data.json';
-
 import {MailIcon, PhoneIcon} from '@heroicons/react/outline'
-import {FormEvent, useState} from "react";
-import {XCircleIcon} from "@heroicons/react/solid";
-import Privacy from "./atoms/privacy";
+import {FormEvent, useEffect, useState} from "react";
+import {ClipboardListIcon, XCircleIcon} from "@heroicons/react/solid";
 import {classNames} from "../utils/utils";
+import {useTranslation} from "next-i18next";
+import {useRouter} from "next/router";
+import Link from "next/link";
 
 const Contact = () => {
     const [fullName, setFullName] = useState<string>("")
@@ -15,7 +15,13 @@ const Contact = () => {
     const [error, setError] = useState<boolean>(false)
     const [alertMessage, setAlertMessage] = useState<string>("")
     const [acceptPrivacy, setAcceptPrivacy] = useState<boolean>(false)
-    const data = Data.contact;
+    const [placeHolders, setPlaceholders] = useState<string[]>([])
+    const router = useRouter()
+    const { t } = useTranslation('common');
+
+    useEffect(() => {
+        setPlaceholders(t('placeholders', {returnObjects:true}))
+    }, [router.locale])
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
@@ -42,14 +48,14 @@ const Contact = () => {
                 setPhone('')
                 setEmail('')
                 setAcceptPrivacy(false)
-                setAlertMessage("Correo enviado correctamente, en breves nos pondremos en contacto contigo")
+                setAlertMessage(t('success-message'))
                 setTimeout(() => {
                     setSubmitted(false)
                 }, 5000)
             }
             if(res.status === 400){
                 setError(true)
-                setAlertMessage("Algo ha ido mal, vuelva a intentarlo")
+                setAlertMessage(t('error-message'))
                 setTimeout(() => {
                     setError(false)
                 }, 5000)
@@ -62,7 +68,7 @@ const Contact = () => {
     }
     return (
         <div
-            id={Data.contact.id}
+            id="contact"
             className="relative ">
             <div className="absolute inset-0">
                 <div className="absolute inset-y-0 left-0 w-1/2 bg-bone"/>
@@ -70,30 +76,34 @@ const Contact = () => {
             <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
                 <div className="bg-bone py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
                     <div className="max-w-lg mx-auto">
-                        <h2 className="text-2xl font-extrabold tracking-tight text-black font-Inter sm:text-5xl">{data.title}</h2>
-                        <p className="mt-3 text-lg leading-6 text-gray-500">
-                            {data.description}
-                        </p>
+                        <h2 className="text-2xl font-extrabold tracking-tight text-black font-Inter sm:text-5xl">{t('contact')}</h2>
                         <dl className="mt-8 text-base text-gray-500">
                             <div>
                                 <dt className="sr-only">Postal address</dt>
-                                <dd>
-                                    <p>{data.street}</p>
-                                    <p>{data.address}</p>
+                                <dd className="flex">
+                                    <ClipboardListIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true"/>
+                                    <div
+                                        className="ml-4"
+                                    >
+                                        <p>Calle Lepanto, 43 Bajo </p>
+                                        <p>46008 Valencia</p>
+                                        <p>Spain</p>
+                                    </div>
+
                                 </dd>
                             </div>
                             <div className="mt-6">
                                 <dt className="sr-only">Phone number</dt>
                                 <dd className="flex">
                                     <PhoneIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true"/>
-                                    <span className="ml-3">{data.phone}</span>
+                                    <span className="ml-3">+34 676 37 40 41</span>
                                 </dd>
                             </div>
                             <div className="mt-3">
                                 <dt className="sr-only">Email</dt>
                                 <dd className="flex">
                                     <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true"/>
-                                    <span className="ml-3">{data.email}</span>
+                                    <span className="ml-3">info@ecoges-solar.es</span>
                                 </dd>
                             </div>
                         </dl>
@@ -115,7 +125,7 @@ const Contact = () => {
                                     name="full-name"
                                     id="full-name"
                                     className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
-                                    placeholder="Nombre"
+                                    placeholder={placeHolders[0]}
                                     value={fullName}
                                     onChange={(e) => setFullName(e.target.value)}
                                 />
@@ -129,7 +139,7 @@ const Contact = () => {
                                     name="email"
                                     type="email"
                                     className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
-                                    placeholder="Email"
+                                    placeholder={placeHolders[1]}
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
@@ -143,7 +153,7 @@ const Contact = () => {
                                     name="phone"
                                     id="phone"
                                     className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
-                                    placeholder="Teléfono"
+                                    placeholder={placeHolders[2]}
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
                                 />
@@ -157,7 +167,7 @@ const Contact = () => {
                                     name="message"
                                     rows={4}
                                     className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
-                                    placeholder="Mensaje"
+                                    placeholder={placeHolders[3]}
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                 />
@@ -174,8 +184,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div className="ml-3 text-sm flex flex-row">
-                                    <p className="text-gray-500">{Data.contact.policy}</p>
-                                    <Privacy />
+                                    <p className="text-gray-500">{t('privacy-message')} <Link href="/privacy-policy" locale={router.locale}><a className="text-darkGreen">{t('privacy-policy')}</a></Link></p>
                                 </div>
                             </div>
                             <div>
@@ -187,7 +196,7 @@ const Contact = () => {
                                         acceptPrivacy ? "text-white bg-softGreen hover:bg-darkGreen" : "text-black bg-gray-300 hover:bg-gray-500"
                                     )}
                                 >
-                                    Enviar
+                                    {t('send')}
                                 </button>
                                 {error &&
                                     <div className="flex mt-8">

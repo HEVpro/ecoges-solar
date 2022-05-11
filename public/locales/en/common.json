@@ -1,4 +1,58 @@
-{
+{  "navbar-footer": [
+  {
+    "name": "About us",
+    "link": "us"
+  },
+  {
+    "name": "Aids",
+    "link": "aids"
+  },
+  {
+    "name": "Equipment",
+    "link": "equipment"
+  },
+  {
+    "name": "Mission",
+    "link": "mission"
+  },
+  {
+    "name": "Contact",
+    "link": "contact"
+  }
+],
   "hero-title": "Calculate your own budget online",
-  "hero-button": "Calculate"
+  "hero-button": "Calculate",
+  "us-title": "Comprehensive photovoltaic solution",
+  "us-description": "We take care of everything",
+  "aids": "We process the European aid NEXT GEN",
+  "equipment": "We install all types of equipment with leading brands",
+  "mission": "Our mission, your savings and saving the planet",
+  "cards": [
+    {
+      "title": "Saving", "description": "Up to -70% on your bill", "icon": "faPiggyBank"
+    },
+    {
+      "title": "Ecological", "description": "0% emissions", "icon": "faLeaf"
+    },
+    {
+      "title": "Renewable", "description": "100% clean energy", "icon": "faRepeat"
+    },
+    {
+      "title": "Economic", "description": "Amortisable in a short time", "icon": "faEuroSign"
+    },
+    {
+      "title": "High tech", "description": "State-of-the-art equipment", "icon": "faMicrochip"
+    },
+    {
+      "title": "Customer service", "description": "Direct contact", "icon": "faUserCheck"
+    }
+  ],
+  "contact": "Kontakt",
+  "placeholders": [
+    "Name", "Email", "Phone", "Message"],
+  "privacy-message": "By clicking you accept the privacy policy. What can you read in",
+  "privacy-policy": "Privacy Policy",
+  "send": "Send",
+  "error-message": "Something went wrong, please try again",
+  "success-message": "Email sent correctly, we will contact you shortly"
 }

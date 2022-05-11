@@ -2,22 +2,27 @@ import Data from '../data.json';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useEffect, useState} from "react";
 import {MyCards} from "../utils/types";
+import {useTranslation} from "next-i18next";
+import {useRouter} from "next/router";
 
 const icons = require("@fortawesome/free-solid-svg-icons")
 
 const Mission = () => {
+    const  router = useRouter()
+    const locale = router.locale
+    const { t } = useTranslation('common');
     const [myCards, setMyCards] = useState<MyCards[]>([])
 
     useEffect(() =>{
-      setMyCards(Data.mission.Cards)  ;
-    },[])
+      setMyCards(t('cards', {returnObjects:true})) ;
+    },[locale])
 
     return (
         <div
-            id={Data.mission.id}
+            id="mission"
             className="bg-secondaryGreen">
             <div className="max-w-4xl mx-auto px-4 py-16 px-8 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-                <h2 className="text-5xl font-extrabold tracking-tight font-Inter">{Data.mission.Title}</h2>
+                <h2 className="text-5xl font-extrabold tracking-tight font-Inter">{t('mission')}</h2>
                 <div
                     className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
                     {myCards.map((feature, index) => (
@@ -28,8 +33,8 @@ const Mission = () => {
                                 </span>
                             </div>
                             <div className="mt-6">
-                                <h3 className="text-lg font-medium">{feature.title}</h3>
-                                <p className="mt-2 text-base text-stone-400">{feature.description}</p>
+                                <h3 className="text-2xl font-medium">{feature.title}</h3>
+                                <p className="mt-2 text-2xl text-stone-400">{feature.description}</p>
                             </div>
                         </div>
                     ))}

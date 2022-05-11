@@ -28,15 +28,7 @@ const Footer = () => {
                         </div>
                     ))}
                 </nav>
-                <div className="mt-8 flex justify-center space-x-6">
-                    {/*{navigation.social.map((item) => (*/}
-                    {/*    <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">*/}
-                    {/*        <span className="sr-only">{item.name}</span>*/}
-                    {/*        <item.icon className="h-6 w-6" aria-hidden="true" />*/}
-                    {/*    </a>*/}
-                    {/*))}*/}
-                </div>
-                <p className="mt-8 text-center text-base text-gray-400">&copy; 2020 Workflow, Inc. All rights
+                <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 <Link href="https://www.hevprojects.com/"><a className="text-black">HEV Projects</a></Link> All rights
                     reserved.</p>
             </div>
         </footer>
