@@ -33,7 +33,7 @@ const Home: NextPage = () => {
                 dangerouslySetInnerHTML={{
                     __html: `
                           window.$crisp=[];
-                          window.CRISP_WEBSITE_ID="155b9871-838d-4430-a233-1b58cc38d844";
+                          window.CRISP_WEBSITE_ID=${process.env.NEXT_PUBLIC_CRISP_ID};
                           (function(){
                             const d = document;
                             const s = d.createElement("script");
