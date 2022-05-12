@@ -5,7 +5,7 @@ const Header = () => {
     const { t } = useTranslation('common');
     return (
         <div id="us">
-            <div className="max-w-7xl mx-auto mt-28 sm:mt-44 py-8 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto py-8 px-4 sm:py-24 sm:px-6 lg:px-8">
                 <div className="text-center">
                     <h2 className="mt-1 text-4xl font-extrabold text-gray-900 font-Inter sm:text-5xl sm:tracking-tight lg:text-6xl">
                         {t('us-title')}
