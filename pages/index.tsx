@@ -26,11 +26,12 @@ const Home: NextPage = () => {
             <link
                 href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Inter:wght@300;500;800&display=swap"
                 rel="stylesheet"/>
-                <Script
-                    id="crisp-widget"
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{
-                        __html: `
+        </Head>
+            <Script
+                id="crisp-widget"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
                           window.$crisp=[];
                           window.CRISP_WEBSITE_ID="155b9871-838d-4430-a233-1b58cc38d844";
                           (function(){
@@ -40,9 +41,8 @@ const Home: NextPage = () => {
                             s.async = 1;
                             d.getElementsByTagName("head")[0].appendChild(s);
                           })();`,
-                    }}
-                />;
-        </Head>
+                }}
+            />;
             <Navbar/>
             <Hero/>
             <Header/>
