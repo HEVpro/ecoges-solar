@@ -1,10 +1,9 @@
 import Data from '../data.json';
 import {useTranslation} from "next-i18next";
-import {useRouter} from "next/router";
 
 const Hero = () => {
-    const router = useRouter()
     const { t } = useTranslation('common');
+
     return (
         <div className="relative">
             <div
