@@ -1,5 +1,4 @@
-import Data from '../data.json';
-import {FormEvent, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import Logo from '../public/ecoges-logo.png'
 import Image from "next/image";
 import Link from "next/link";
@@ -61,7 +60,6 @@ const Navbar = () => {
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive}/>
             <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon
                 className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]}/></button>
-
         </nav>
     )
 }

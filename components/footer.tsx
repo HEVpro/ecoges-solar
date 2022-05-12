@@ -1,13 +1,8 @@
-import Data from '../data.json';
-import {useState} from "react";
-import Logo from '../public/dark-logo.png'
-import Image from "next/image";
 import Link from "next/link";
-import PrimaryButton from "./atoms/button";
-import ResponsiveMenu from "./atoms/responsive-menu";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-
-import {MailIcon, PhoneIcon} from '@heroicons/react/outline'
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
+import {useTranslation} from "next-i18next";
+import Navbar from "./navbar";
 
 const main = [
     {name: 'Nosotros', href: '#Nosotros'},
@@ -16,18 +11,30 @@ const main = [
 ];
 
 const Footer = () => {
+    const [navbar, setNavbar] = useState<Navbar[]>([])
+    const [onPrivacy, setOnPrivacy] = useState<boolean>(false)
+    const router = useRouter()
+    const {t} = useTranslation('common');
+
+    useEffect(() => {
+        setNavbar(t('navbar-footer', {returnObjects: true}))
+        router.pathname.includes('privacy-policy') ? setOnPrivacy(true) : setOnPrivacy(false)
+    }, [router.locale])
+
     return (
         <footer className="bg-white">
             <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-                <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-                    {main.map((item) => (
-                        <div key={item.name} className="px-5 py-2">
-                            <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                                {item.name}
-                            </a>
-                        </div>
-                    ))}
-                </nav>
+                {!onPrivacy &&
+                    <section className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                    {navbar.map((x, index) => {
+                        return (
+                            <Link key={index} href={"#" + x.link}>
+                                <a className="mx-3 lg:mx-3 xl:mx-6 hover:text-white hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x.name}</a>
+                            </Link>
+                        )
+                    })}
+                </section>
+                }
                 <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 <Link href="https://www.hevprojects.com/"><a className="text-black">HEV Projects</a></Link> All rights
                     reserved.</p>
             </div>
