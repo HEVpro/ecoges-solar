@@ -47,7 +47,7 @@
       "title": "Kundendienst", "description": "Direkten Kontakt", "icon": "faUserCheck"
     }
   ],
-  "contact": "Contacto",
+  "contact": "Kontakt",
   "placeholders": ["Name", "E-Mail", "Telefon", "Nachricht"],
   "privacy-message": "Durch Anklicken akzeptieren Sie die Datenschutzerklärung. Was kann man einlesen",
   "privacy-policy": "Datenschutz-Bestimmungen",

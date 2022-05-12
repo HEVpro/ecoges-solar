@@ -47,7 +47,7 @@
       "title": "Customer service", "description": "Direct contact", "icon": "faUserCheck"
     }
   ],
-  "contact": "Kontakt",
+  "contact": "Contact",
   "placeholders": [
     "Name", "Email", "Phone", "Message"],
   "privacy-message": "By clicking you accept the privacy policy. What can you read in",

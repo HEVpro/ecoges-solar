@@ -55,7 +55,7 @@ const Navbar = () => {
             </div>
             <div className="flex p-1 items-center justify-between">
                 <Languages/>
-                <PrimaryButton target="#Contacto" content="Contacto" classname="mr-0 md:mr-8 hidden sm:block"/>
+                <PrimaryButton target="#contact" content={t('contact')} classname="mr-0 md:mr-8 hidden sm:block"/>
             </div>
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive}/>
             <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon

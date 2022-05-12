@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                         </a>
                     </Link>
                 </div>
-                <PrimaryButton target={"/"} content={"Volver"} classname={"mr-6"}/>
+                <PrimaryButton target={"/"} content={t('button')} classname={"mr-6"}/>
             </nav>
             <div className="flex items-center justify-center py-6">
                 <div className="w-[85%] md:w-2/3 px-4 font-Barlow text-justify">
