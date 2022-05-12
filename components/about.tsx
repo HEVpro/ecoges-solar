@@ -10,7 +10,7 @@ const About = () => {
         <>
             <div
                 id="aids"
-                className="flex flex-col w-full bg-bone flex  items-start justify-center px-8 sm:px-12 lg:px-28 h-full">
+                className="flex flex-col w-full bg-bone flex items-start justify-center px-8 sm:px-12 lg:px-28 h-full">
                         <div className="flex items-center justify-between w-full font-Inter">
                             <div className="w-[65ch] sm:w-[53ch] lg:w-[65ch]">
                                 <h1 className="text-4xl sm:text-5xl font-semibold">{t('aids')}</h1>
