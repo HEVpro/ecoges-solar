@@ -59,7 +59,7 @@ const Navbar = () => {
             </div>
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive}/>
             <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon
-                className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]}/></button>
+                className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]} aria-label={"Open responsive menu"}/></button>
         </nav>
     )
 }
