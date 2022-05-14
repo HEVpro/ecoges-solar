@@ -19,6 +19,8 @@ const Home: NextPage = () => {
         <div className="flex flex-col justify-items-end">
             <Head>
                 <title>{Data.pageTitle}</title>
+                {/*@ts-ignore*/}
+                <meta name="description" content="Ecoges Solar website"/>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 {/*// @ts-ignore*/}
@@ -26,16 +28,18 @@ const Home: NextPage = () => {
                 <link
                     href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Inter:wght@300;500;800&display=swap"
                     rel="stylesheet"/>
-                <Script
-                    async
-                    strategy="afterInteractive"
-                    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-                />
-                <Script
-                    strategy="afterInteractive"
-                    id="google-analytics"
-                    dangerouslySetInnerHTML={{
-                        __html: `
+
+            </Head>
+            <Script
+                async
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+            />
+            <Script
+                strategy="afterInteractive"
+                id="google-analytics"
+                dangerouslySetInnerHTML={{
+                    __html: `
                                     window.dataLayer = window.dataLayer || [];
                                     function gtag(){dataLayer.push(arguments);}
                                     gtag('js', new Date());
@@ -43,9 +47,8 @@ const Home: NextPage = () => {
                                       page_path: window.location.pathname,
                                     });
                                   `,
-                    }}
-                />
-            </Head>
+                }}
+            />
             <Script
                 id="crisp-widget"
                 strategy="afterInteractive"
