@@ -178,7 +178,7 @@ const Contact = () => {
                                         Privacy
                                     </label>
                                     <input
-                                        id="Privacy"
+                                        id="privacy"
                                         name="privacy"
                                         type="checkbox"
                                         checked={acceptPrivacy}
