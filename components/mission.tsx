@@ -34,7 +34,7 @@ const Mission = () => {
                             </div>
                             <div className="mt-6 text-center sm:text-left">
                                 <h3 className="text-2xl font-medium">{feature.title}</h3>
-                                <p className="mt-2 text-2xl text-stone-400">{feature.description}</p>
+                                <p className="mt-2 text-2xl text-black opacity-60">{feature.description}</p>
                             </div>
                         </div>
                     ))}

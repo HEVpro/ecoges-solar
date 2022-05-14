@@ -174,9 +174,12 @@ const Contact = () => {
                             </div>
                             <div className="flex items-start">
                                 <div className="h-5 flex items-center">
+                                    <label htmlFor="privacy" className="sr-only">
+                                        Privacy
+                                    </label>
                                     <input
-                                        id="offers"
-                                        name="offers"
+                                        id="Privacy"
+                                        name="privacy"
                                         type="checkbox"
                                         checked={acceptPrivacy}
                                         onChange={handlePrivacy}

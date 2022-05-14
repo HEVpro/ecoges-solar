@@ -42,14 +42,14 @@ export default function Languages() {
                                 <div
                                     className="relative z-0 inline-flex shadow-sm rounded-md divide-x divide-softGreen">
                                     <div
-                                        className="relative inline-flex items-center bg-softGreen py-2 pl-3 pr-4 border border-transparent rounded-l-md shadow-sm text-white">
+                                        className="relative inline-flex items-center bg-softGreen py-2 pl-3 pr-4 border border-transparent rounded-l-md shadow-sm text-black">
                                         <CheckIcon className="h-5 w-5" aria-hidden="true"/>
                                         <p className="ml-2.5 text-sm font-medium">{selected.label}</p>
                                     </div>
                                     <Listbox.Button
-                                        className="relative inline-flex items-center bg-softGreen p-2 rounded-l-none rounded-r-md text-sm font-medium text-white hover:bg-softGreen focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-green-500">
+                                        className="relative inline-flex items-center bg-softGreen p-2 rounded-l-none rounded-r-md text-sm font-medium text-black hover:bg-softGreen focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-green-500">
                                         <span className="sr-only">Change published status</span>
-                                        <ChevronDownIcon className="h-5 w-5 text-white" aria-hidden="true"/>
+                                        <ChevronDownIcon className="h-5 w-5 text-black" aria-hidden="true"/>
                                     </Listbox.Button>
                                 </div>
                             </div>
@@ -68,8 +68,8 @@ export default function Languages() {
                                             key={option.label}
                                             className={({active}) =>
                                                 classNames(
-                                                    active ? 'text-white bg-softGreen' : 'text-gray-900',
-                                                    'cursor-default select-none relative p-4 text-sm'
+                                                    active ? 'bg-softGreen' : '',
+                                                    'cursor-default select-none relative p-4 text-sm text-black'
                                                 )
                                             }
                                             value={option}
@@ -80,7 +80,7 @@ export default function Languages() {
                                                     <div className="flex justify-between">
                                                         <p className={selected ? 'font-semibold' : 'font-normal'}>{option.label}</p>
                                                         {selected ? (
-                                                            <span className={active ? 'text-white' : 'text-green-500'}>
+                                                            <span className={active ? 'text-black' : 'text-green-500'}>
                                                           <CheckIcon className="h-5 w-5" aria-hidden="true"/>
                                                         </span>
                                                         ) : null}

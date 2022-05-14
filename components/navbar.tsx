@@ -39,8 +39,8 @@ const Navbar = () => {
             className="z-50 w-full bg-darkGreen flex items-center justify-evenly sm:justify-between py-2  font-Barlow relative text-white">
             <div className="ml-0 mr-4 md:ml-28">
                 <Link href="/">
-                    <a>
-                        <Image src={Logo} width={200} height={62}/>
+                    <a href={"/"}>
+                        <Image src={Logo} width={200} height={62} alt={"Ecoges logo"}/>
                     </a>
                 </Link>
             </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
                 {navbar.map((x, index) => {
                     return (
                         <Link key={index} href={"#" + x.link}>
-                            <a className="mx-3 lg:mx-3 xl:mx-6 hover:text-white hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x.name}</a>
+                            <a className="mx-3 lg:mx-3 xl:mx-6 hover:text-black hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x.name}</a>
                         </Link>
                     )
                 })}
@@ -59,7 +59,7 @@ const Navbar = () => {
             </div>
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive}/>
             <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon
-                className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]}/></button>
+                className="text-5xl text-black w-10 h-10" icon={icons[myIcons[0].icon]}/></button>
         </nav>
     )
 }

@@ -14,7 +14,7 @@ const Whatsapp = () => {
                 <button onClick={handleContact} className="w-14 h-14 sm:w-16 sm:h-16 z-50 bg-softGreen rounded-full flex items-center justify-center text-white p-2">
                     <Image
                         src={"/whatsapp.png"}
-                        alt="Picture of the author"
+                        alt="Whatsapp icon"
                         width={40}
                         height={40}
                     />
