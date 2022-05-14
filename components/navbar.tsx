@@ -36,11 +36,11 @@ const Navbar = () => {
 
     return (
         <nav
-            className="z-50 w-full bg-darkGreen flex items-center justify-evenly sm:justify-between py-2  font-Barlow relative text-white">
-            <div className="ml-0 mr-4 md:ml-28">
+            className="z-50 w-full bg-darkGreen flex items-center justify-evenly sm:justify-between py-2  px-2 font-Barlow relative text-white">
+            <div className="w-40 ml-0 mr-4 md:ml-28">
                 <Link href="/">
                     <a href={"/"}>
-                        <Image src={Logo} width={150} height={62} alt={"Ecoges logo"}/>
+                        <Image src={Logo} layout="responsive" alt={"Ecoges logo"}/>
                     </a>
                 </Link>
             </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
             </div>
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive}/>
             <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon
-                className="text-5xl text-black w-10 h-10" icon={icons[myIcons[0].icon]}/></button>
+                className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]}/></button>
         </nav>
     )
 }

@@ -44,7 +44,7 @@ export default function Languages() {
                                     <div
                                         className="relative inline-flex items-center bg-softGreen py-2 pl-3 pr-4 border border-transparent rounded-l-md shadow-sm text-black">
                                         <CheckIcon className="h-5 w-5" aria-hidden="true"/>
-                                        <p className="ml-2.5 text-sm font-medium">{selected.label}</p>
+                                        <p className="ml-1 text-sm font-medium">{selected.label}</p>
                                     </div>
                                     <Listbox.Button
                                         className="relative inline-flex items-center bg-softGreen p-2 rounded-l-none rounded-r-md text-sm font-medium text-black hover:bg-softGreen focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-green-500">
