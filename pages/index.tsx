@@ -18,14 +18,14 @@ const Home: NextPage = () => {
     return (
         <div className="flex flex-col justify-items-end">
             <Head>
-            <title>{Data.pageTitle}</title>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            {/*// @ts-ignore*/}
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Inter:wght@300;500;800&display=swap"
-                rel="stylesheet"/>
+                <title>{Data.pageTitle}</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                {/*// @ts-ignore*/}
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Inter:wght@300;500;800&display=swap"
+                    rel="stylesheet"/>
                 <Script
                     async
                     strategy="afterInteractive"
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                                   `,
                     }}
                 />
-        </Head>
+            </Head>
             <Script
                 id="crisp-widget"
                 strategy="afterInteractive"
@@ -69,14 +69,14 @@ const Home: NextPage = () => {
             <Mission/>
             <Contact/>
             <Footer/>
-            <Whatsapp />
+            <Whatsapp/>
         </div>
     )
 }
 
 export default Home
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({locale}: any) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ['common'], nextI18NextConfig)),

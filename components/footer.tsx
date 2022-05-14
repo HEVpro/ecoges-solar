@@ -29,13 +29,13 @@ const Footer = () => {
                     {navbar.map((x, index) => {
                         return (
                             <Link key={index} href={"#" + x.link}>
-                                <a className="mx-3 lg:mx-3 xl:mx-6 hover:text-white hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x.name}</a>
+                                <a className="mx-3 lg:mx-3 xl:mx-6 hover:text-darkGreen hover:underline hover:decoration-2 hover:underline-offset-4">{x.name}</a>
                             </Link>
                         )
                     })}
                 </section>
                 }
-                <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 <Link href="https://www.hevprojects.com/"><a className="text-black">HEV Projects</a></Link> All rights
+                <p className="mt-8 text-center text-black">&copy; 2022 <Link href="https://www.hevprojects.com/"><a className="text-black font-bold text-md">HEV Projects</a></Link> All rights
                     reserved.</p>
             </div>
         </footer>
