@@ -1,6 +1,5 @@
 import {useTranslation} from "next-i18next";
 import {useMedia} from "react-use";
-import {useEffect, useState} from "react";
 
 const Hero = () => {
     const {t} = useTranslation('common');

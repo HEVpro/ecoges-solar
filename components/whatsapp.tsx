@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from "next/link";
 import WhatsappLogo from '../public/Whatsapp.png'
-import WhatsappDesktop from '../public/whatsapp.png'
+import WhatsappDesktop from '../public/whatsapp-desktop.png'
 import {useMedia} from "react-use";
 
 const Whatsapp = () => {
