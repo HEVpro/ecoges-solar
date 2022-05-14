@@ -18,7 +18,7 @@ const About = () => {
                             <h1 className="hidden sm:block text-[90px] font-bold text-black opacity-50 ">01</h1>
                         </div>
                         <div className="w-full my-6">
-                            <Image className="object-contain" src={Landscape} width={1700} height={460} priority alt={"Colonial house with solar panel on the roof"}/>
+                            <Image className="object-contain" src={Landscape} layout="responsive" priority alt={"Colonial house with solar panel on the roof"}/>
                         </div>
             </div>
             <div id="equipment"
@@ -30,7 +30,7 @@ const About = () => {
                     <h1 className="hidden sm:block text-[90px] font-bold text-black opacity-50">02</h1>
                 </div>
                 <div className="w-full my-6">
-                    <Image className="object-contain" src={Landscape2} width={1700} height={460} priority alt={"Family house with solar panel on the roof"}/>
+                    <Image className="object-contain" src={Landscape2} layout="responsive" priority alt={"Family house with solar panel on the roof"}/>
                 </div>
             </div>
         </>
