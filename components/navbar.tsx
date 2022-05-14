@@ -58,8 +58,8 @@ const Navbar = () => {
                 <PrimaryButton target="#contact" content={t('contact')} classname="mr-0 md:mr-8 hidden sm:block"/>
             </div>
             <ResponsiveMenu edit={menuResponsive} setEdit={setMenuResponsive}/>
-            <button className="block lg:hidden" onClick={handleResponsiveMenu}><FontAwesomeIcon
-                className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]} aria-label={"Open responsive menu"}/></button>
+            <button className="block lg:hidden" aria-label={"Open responsive menu"} onClick={handleResponsiveMenu}><FontAwesomeIcon
+                className="text-5xl text-white w-10 h-10" icon={icons[myIcons[0].icon]} /></button>
         </nav>
     )
 }
