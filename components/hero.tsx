@@ -3,9 +3,9 @@ import {useMedia} from "react-use";
 
 const Hero = () => {
     const {t} = useTranslation('common');
-    const isMobile = useMedia('(max-width: 480px)')
-    const isTablet = useMedia('(max-width: 1024px)')
-    const isDesktop = useMedia('(min-width: 1024px)')
+    // const isMobile = useMedia('(max-width: 480px)')
+    // const isTablet = useMedia('(max-width: 1024px)')
+    // const isDesktop = useMedia('(min-width: 1024px)')
 
     return (
         <div className="relative">
@@ -18,13 +18,31 @@ const Hero = () => {
                         className="w-44 mx-8 h-12 border-2 border-white rounded-[25px] font-bold mb-4 sm:text-2xl sm:mb-10 mt-2 sm:mt-10 sm:w-72 ">{t('hero-button')}</button>
                 </div>
             </div>
-            <div className="w-screen">
-                <video autoPlay loop muted playsInline  poster={"/thumbnail.webp"} preload={"true"} className="rounded-bl-[85px]">
-                    {isMobile && <source src={"/video-mobile.mp4"} type='video/mp4' media="all and (min-device-width: 480px)"/>}
-                    {isTablet &&  <source src={"/video.mp4"} type='video/mp4' media="all and (min-device-width: 1024px)"/>}
-                    {isDesktop &&   <source src={"/video-cut.mp4"} type='video/mp4'/>}
+            <div className="w-screen sm:hidden">
+                <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
+                    <source src='/video-mobile.mp4' type='video/mp4' media="all"/>
+                    <source src='/video-mobile.webm' type='video/webm' media="all"/>
                 </video>
             </div>
+            <div className="hidden sm:block w-screen lg:hidden">
+                <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
+                    <source src='/video.mp4' type='video/mp4' media="all" />
+                    <source src='/video.webm' type='video/webm' media="all" />
+                </video>
+            </div>
+            <div className="hidden  lg:inline w-screen">
+                <video autoPlay loop muted playsInline  className="rounded-bl-[85px]">
+                    <source src='/video-cut.mp4' type='video/mp4'/>
+                    <source src='/video-cut.webm' type='video/webm' />
+                </video>
+            </div>
+            {/*<div className="w-screen">*/}
+            {/*    <video autoPlay loop muted playsInline  poster={"/thumbnail.webp"} preload={"true"} className="rounded-bl-[85px]">*/}
+            {/*        {isMobile && <source src={"/video-mobile.mp4"} type='video/mp4' media="all"/>}*/}
+            {/*        {isTablet &&  <source src={"/video.mp4"} type='video/mp4' media="all"/>}*/}
+            {/*        {isDesktop &&   <source src={"/video-cut.mp4"} type='video/mp4'/>}*/}
+            {/*    </video>*/}
+            {/*</div>*/}
         </div>
     )
 }
