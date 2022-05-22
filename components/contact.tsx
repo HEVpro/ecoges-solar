@@ -74,9 +74,9 @@ const Contact = () => {
                 <div className="absolute inset-y-0 left-0 w-1/2 bg-bone"/>
             </div>
             <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
-                <div className="bg-bone py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+                <div className="bg-bone py-4 px-10 sm:px-6 sm:py-8 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
                     <div className="max-w-lg mx-auto">
-                        <h2 className="text-2xl font-extrabold tracking-tight text-black font-Inter sm:text-5xl">{t('contact')}</h2>
+                        <h2 className="text-4xl font-extrabold tracking-tight text-black font-Inter sm:text-5xl">{t('contact')}</h2>
                         <dl className="mt-8 text-base text-gray-500">
                             <div>
                                 <dt className="sr-only">Postal address</dt>
@@ -109,7 +109,7 @@ const Contact = () => {
                         </dl>
                     </div>
                 </div>
-                <div className="bg-bone py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+                <div className="bg-bone py-4 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
                     <div className="max-w-lg mx-auto lg:max-w-none">
                         <form
                             method="POST"
