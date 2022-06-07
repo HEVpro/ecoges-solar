@@ -17,7 +17,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className={"w-full h-full md:h-[98%]"}>
-                <Image src={HeroBg} className={"rounded-bl-[85px]"} priority/>
+                <Image src={HeroBg} className={"rounded-bl-[85px]"} priority quality={50} placeholder={"blur"}/>
             </div>
         </div>
     )
