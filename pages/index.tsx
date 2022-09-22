@@ -12,6 +12,8 @@ import Whatsapp from "../components/whatsapp";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import nextI18NextConfig from '../next-i18next.config.js';
 import Script from "next/script";
+import Thanks from './gracias';
+import Form from './form'
 
 
 const Home: NextPage = () => {
