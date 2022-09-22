@@ -1,7 +1,5 @@
 import type {NextPage} from 'next'
-import Privacy from "../privacy-policy.json"
 import Footer from "../components/footer";
-import Navbar from "../components/navbar";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/ecoges-logo.png";
