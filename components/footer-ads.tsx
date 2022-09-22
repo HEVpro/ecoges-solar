@@ -6,11 +6,10 @@ import Navbar from "./navbar";
 
 const FooterAds = () => {
     const [onPrivacy, setOnPrivacy] = useState<boolean>(false)
-    const router = useRouter()
-    const {t} = useTranslation('common');
+
 
     const links = [
-        {name: "Nosotross", href: "us"},
+        {name: "Nosotros", href: "us"},
         {name: "Ayudas", href: "aids"},
         {name: "Equipamiento", href: "equipment"},
         {name: "Misión", href: "mission"},

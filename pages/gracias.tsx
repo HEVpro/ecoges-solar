@@ -13,12 +13,11 @@ const Thanks = () => {
     >
       <NavbarAds />
       <div className="bg-bone h-screen">
-        <div className="mx-auto max-w-3xl py-20 px-4 text-center sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-5xl mb-10 text-black font-bold text-Inter">
-            <span className=" block text-5xl">Gracias</span>
-            <span className="block text-5xl">por contactar!</span>
+        <div className="mx-auto max-w-3xl py-20 px-8 text-center sm:py-20 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-6xl mb-6 text-black font-bold text-Inter">
+            <span className="">Gracias por contactar!</span>
           </h2>
-          <p className="mt-4 text-xl leading-6 text-gray-700">
+          <p className="mt-4 text-base md:text-xl leading-6 text-gray-700">
             Hemos recibido tus datos satisfactoriamente y nos pondremos en
             contacto contigo lo antes posible.
           </p>
