@@ -1,7 +1,4 @@
 import React from 'react'
-import Logo from '../public/ecoges-logo.png'
-import Image from 'next/image'
-import Footer from "../components/footer";
 import FooterAds from "../components/footer-ads";
 import NavbarAds from "../components/atoms/navbar-ads";
 
@@ -12,20 +9,22 @@ const Thanks = () => {
   return (
     <div
       id="gracias"
-      className="flex flex-col text-bone bg-bone w-screen h-screen "
+      className="flex flex-col font-Inter text-bone bg-bone w-screen h-screen "
     >
       <NavbarAds />
-      <div className="border-4 border-gray-400 shadow-black shadow-lg
-            rounded-xl w-max m-auto py-4 px-8 bg-white">
-        <span className="capitalize flex justify-center text-black
-            font-Barlow font-black text-6xl mt-12 mb-8">
-          GRACIAS
-        </span>
-        <span className="flex justify-center text-lg mb-10 font-Inter text-gray-500">
-          Nos pondremos en contacto contigo lo antes posible.
-        </span>
+      <div className="bg-bone h-screen">
+        <div className="mx-auto max-w-3xl py-20 px-4 text-center sm:py-20 sm:px-6 lg:px-8">
+          <h2 className="text-5xl mb-10 text-black font-bold text-Inter">
+            <span className=" block text-5xl">Gracias</span>
+            <span className="block text-5xl">por contactar!</span>
+          </h2>
+          <p className="mt-4 text-xl leading-6 text-gray-700">
+            Hemos recibido tus datos satisfactoriamente y nos pondremos en
+            contacto contigo lo antes posible.
+          </p>
+        </div>
       </div>
-      <FooterAds/>
+      <FooterAds />
     </div>
   );
 }
