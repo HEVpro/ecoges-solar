@@ -206,7 +206,7 @@ const Budget = () => {
                                 id="company-website"
                                 value={consumption.data}
                                 onChange={(e) => setConsumption({...consumption,  data: e.target.value})}
-                                className="block w-full min-w-0 flex-1 rounded-none rounded-l-md border-gray-300 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-right"
+                                className="block w-full min-w-0 flex-1 rounded-none rounded-l-md border-gray-300 py-3 px-4 focus:ring-green-500 focus:border-green-500 sm:text-sm text-right"
                                 placeholder="Ej. 24,00"
                             />
                             <span
