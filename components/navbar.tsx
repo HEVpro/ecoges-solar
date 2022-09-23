@@ -48,7 +48,7 @@ const Navbar = () => {
                 {navbar.map((x, index) => {
                     return (
                         <Link key={index} href={"#" + x.link}>
-                            <a className="mx-3 lg:mx-3 xl:mx-6 hover:text-black hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x.name}</a>
+                            <a className="mx-3 lg:mx-3 xl:mx-6 hover:text-softGreen hover:underline hover:decoration-2 hover:decoration-white hover:underline-offset-4">{x.name}</a>
                         </Link>
                     )
                 })}
