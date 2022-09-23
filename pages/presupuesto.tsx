@@ -2,7 +2,7 @@ import NavbarAds from "../components/atoms/navbar-ads";
 import FooterAds from "../components/footer-ads";
 import Link from "next/link";
 import {classNames} from "../utils/utils";
-import {XCircleIcon} from "@heroicons/react/solid";
+import {CheckCircleIcon, XCircleIcon} from "@heroicons/react/solid";
 import {FormEvent, useState} from "react";
 import {useRouter} from "next/router";
 
@@ -56,21 +56,7 @@ const Budget = () => {
         }).then((res) => {
             console.log(res.body)
             if (res.status === 200) {
-                setSubmitted(true)
-                setFullName('')
-                setPhone('')
-                setFullAddress({
-                    address: "",
-                    zipCode: "",
-                    city: "",
-                    province: ""
-                })
-                setConsumption({type: ConsumptionType.EUROS, data: "0,00"})
-                setAcceptPrivacy(false)
-                setAlertMessage("Mensaje enviado correctamente!")
-                setTimeout(() => {
-                    setSubmitted(false)
-                }, 5000)
+                router.push("/gracias")
             }
             if (res.status === 400) {
                 setError(true)
@@ -275,7 +261,7 @@ const Budget = () => {
                         {submitted &&
                             <div className="flex mt-8">
                                 <div className="flex-shrink-0">
-                                    <XCircleIcon className="h-5 w-5 text-green-700" aria-hidden="true"/>
+                                    <CheckCircleIcon className="h-5 w-5 text-green-700" aria-hidden="true"/>
                                 </div>
                                 <div className="ml-3">
                                     <h3 className="text-sm font-medium text-green-700">{alertMessage}</h3>

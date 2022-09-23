@@ -1,11 +1,18 @@
 import React from 'react'
 import FooterAds from "../components/footer-ads";
 import NavbarAds from "../components/atoms/navbar-ads";
+import {useRouter} from "next/router";
 
 
 
 
 const Thanks = () => {
+  const router = useRouter()
+
+  setTimeout(() => {
+    router.push("/")
+  }, 6000)
+
   return (
     <div
       id="gracias"
