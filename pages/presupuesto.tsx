@@ -12,7 +12,6 @@ enum ConsumptionType{
 }
 
 const Budget = () => {
-    const [message, setMessage] = useState<string>("")
     const [fullName, setFullName] = useState<string>("")
     const [phone, setPhone] = useState<string>("")
     const [fullAddress, setFullAddress] = useState<any>({
@@ -43,10 +42,11 @@ const Budget = () => {
         let data = {
             fullName,
             phone,
-            message,
+            fullAddress,
+            consumption,
             privacy: acceptPrivacy ? "Acepta la política de privacidad" : "No acepta la política de privacidad"
         }
-        fetch('/api/contact', {
+        fetch('/api/campaign', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -58,7 +58,6 @@ const Budget = () => {
             if (res.status === 200) {
                 setSubmitted(true)
                 setFullName('')
-                setMessage('')
                 setPhone('')
                 setFullAddress({
                     address: "",
@@ -66,6 +65,7 @@ const Budget = () => {
                     city: "",
                     province: ""
                 })
+                setConsumption({type: ConsumptionType.EUROS, data: "0,00"})
                 setAcceptPrivacy(false)
                 setAlertMessage("Mensaje enviado correctamente!")
                 setTimeout(() => {
