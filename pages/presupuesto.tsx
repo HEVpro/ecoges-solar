@@ -32,8 +32,6 @@ const Budget = () => {
 
     const router = useRouter()
 
-    const [submitted, setSubmitted] = useState<boolean>(false)
-
     const handlePrivacy = () => {
         acceptPrivacy ? setAcceptPrivacy(false) : setAcceptPrivacy(true)
     }
@@ -72,10 +70,10 @@ const Budget = () => {
         <>
             <NavbarAds/>
             <div className={"flex flex-col items-center justify-center pt-6 pb-24"}>
-                <h2 className={"font-Inter text-4xl font-semibold mb-8"}>Pide tu presupuesto ahora!</h2>
+                <h2 className={"font-Inter text-3xl md:text-4xl font-semibold mb-8 text-center"}>Pide tu presupuesto ahora!</h2>
                 <form
                     method="POST"
-                    className="grid grid-cols-2 gap-y-6 gap-x-4 font-Inter w-1/2"
+                    className="grid grid-cols-2 gap-y-6 gap-x-4 font-Inter w-full px-6 lg:w-2/3"
 
                 >
                     <div>
@@ -166,29 +164,29 @@ const Budget = () => {
                         <label htmlFor="phone">
                             Tipo de consumo
                         </label>
-                        <div className={"h-12 flex items-center justify-start pr-2 text-gray-600 text-lg"}>
+                        <div className={"h-12 flex flex-col items-start sm:flex-row sm:items-center justify-start pr-2 text-gray-600 text-lg"}>
                             <div>
-                                <label htmlFor="phone">
+                                <label htmlFor="phone" className={"text-sm md:text-base"}>
                                     Kilovatios (Kw)
                                 </label>
                                 <input
                                     id="privacy"
                                     name="privacy"
                                     type="checkbox"
-                                    checked={consumption.type === ConsumptionType.KW ? true : false}
+                                    checked={consumption.type === ConsumptionType.KW}
                                     onChange={() => setConsumption({...consumption, type: ConsumptionType.KW})}
-                                    className="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded ml-2"
+                                    className="focus:ring-green-500 sm:h-4 sm:w-4 text-green-600 border-gray-300 rounded ml-2"
                                 />
                             </div>
-                            <div className={"ml-6"}>
-                                <label htmlFor="phone">
+                            <div className={"sm:ml-6"}>
+                                <label htmlFor="phone"  className={"text-sm md:text-base"}>
                                     Euros (€)
                                 </label>
                                 <input
                                     id="privacy"
                                     name="privacy"
                                     type="checkbox"
-                                    checked={consumption.type === ConsumptionType.EUROS ? true : false}
+                                    checked={consumption.type === ConsumptionType.EUROS}
                                     onChange={() => setConsumption({...consumption, type: ConsumptionType.EUROS})}
                                     className="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded ml-2"
                                 />
@@ -208,7 +206,7 @@ const Budget = () => {
                                 id="company-website"
                                 value={consumption.data}
                                 onChange={(e) => setConsumption({...consumption,  data: e.target.value})}
-                                className="block w-full min-w-0 flex-1 rounded-none rounded-l-md border-gray-300 px-3 py-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-right"
+                                className="block w-full min-w-0 flex-1 rounded-none rounded-l-md border-gray-300 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-right"
                                 placeholder="Ej. 24,00"
                             />
                             <span
@@ -255,16 +253,6 @@ const Budget = () => {
                                 </div>
                                 <div className="ml-3">
                                     <h3 className="text-sm font-medium text-red-800">{alertMessage}</h3>
-                                </div>
-                            </div>
-                        }
-                        {submitted &&
-                            <div className="flex mt-8">
-                                <div className="flex-shrink-0">
-                                    <CheckCircleIcon className="h-5 w-5 text-green-700" aria-hidden="true"/>
-                                </div>
-                                <div className="ml-3">
-                                    <h3 className="text-sm font-medium text-green-700">{alertMessage}</h3>
                                 </div>
                             </div>
                         }
