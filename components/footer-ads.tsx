@@ -18,7 +18,7 @@ const FooterAds = () => {
 
 
     return (
-      <footer className="bg-white text-black">
+      <footer className="bg-white text-black font-Inter">
         <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
           {!onPrivacy && (
             <section
