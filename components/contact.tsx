@@ -85,7 +85,7 @@ const Contact = () => {
                                     <div
                                         className="ml-4"
                                     >
-                                        <p>Calle Lepanto, 43 Bajo </p>
+                                        <p>Calle Lepanto, 37 Bajo </p>
                                         <p>46008 Valencia</p>
                                         <p>Spain</p>
                                     </div>
