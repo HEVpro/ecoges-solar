@@ -9,7 +9,31 @@ import { GTM_ID, pageview } from '../lib/gtm'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()
+
     useEffect(() => {
+        import('react-facebook-pixel')
+            .then(module => module.default)
+            .then(ReactPixel => {
+                ReactPixel.init(process.env.FB_PIXEL_ID as string)
+                ReactPixel.pageView()
+            })
+    }, [])
+
+    useEffect(() => {
+        // This pageview only triggers the first time (it's important for Pixel to have real information)
+        import('react-facebook-pixel')
+            .then(module => module.default)
+            .then(ReactPixel => {
+                ReactPixel.pageView()
+            })
+
+        const handleRouteChange = () => {
+            import('react-facebook-pixel')
+                .then(module => module.default)
+                .then(ReactPixel => {
+                    ReactPixel.pageView()
+                })
+        }
         router.events.on('routeChangeComplete', pageview)
         return () => {
             router.events.off('routeChangeComplete', pageview)
@@ -17,6 +41,26 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [router.events])
   return (
       <>
+          {/*Facebook Pixel*/}
+          <Script
+              id="fb-pixel"
+              type={"text/plain"}
+              className={"optanon-category-C0001-C0002-C0003-C0004"}
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                  __html: `
+                            !function(f,b,e,v,n,t,s)
+                            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                            n.queue=[];t=b.createElement(e);t.async=!0;
+                            t.src=v;s=b.getElementsByTagName(e)[0];
+                            s.parentNode.insertBefore(t,s)}(window, document,'script',
+                            'https://connect.facebook.net/en_US/fbevents.js');
+                            fbq('init', ${process.env.FB_PIXEL_ID});
+                          `,
+              }}
+          />
           {/* Google Tag Manager - Global base code */}
           <Script
               id="gtag-base"
