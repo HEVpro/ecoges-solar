@@ -6,6 +6,7 @@ import Script from "next/script";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import { GTM_ID, pageview } from '../lib/gtm'
+import { FB_PIXEL_ID } from "../lib/fbq"
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()
@@ -14,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         import('react-facebook-pixel')
             .then(module => module.default)
             .then(ReactPixel => {
-                ReactPixel.init(process.env.FB_PIXEL_ID as string)
+                ReactPixel.init(FB_PIXEL_ID as string)
                 ReactPixel.pageView()
             })
     }, [])
@@ -57,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                             t.src=v;s=b.getElementsByTagName(e)[0];
                             s.parentNode.insertBefore(t,s)}(window, document,'script',
                             'https://connect.facebook.net/en_US/fbevents.js');
-                            fbq('init', ${process.env.FB_PIXEL_ID});
+                            fbq('init', ${FB_PIXEL_ID});
                           `,
               }}
           />
