@@ -1,14 +1,14 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { appWithTranslation } from 'next-i18next';
+import type {AppProps} from 'next/app'
+import {appWithTranslation} from 'next-i18next';
 import nextI18NextConfig from '../next-i18next.config.js';
 import Script from "next/script";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
-import { GTM_ID, pageview } from '../lib/gtm'
-import { FB_PIXEL_ID } from "../lib/fbq"
+import {GTM_ID, pageview} from '../lib/gtm'
+import {FB_PIXEL_ID} from "../lib/fbq"
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({Component, pageProps}: AppProps) {
     const router = useRouter()
 
     useEffect(() => {
@@ -40,16 +40,16 @@ function MyApp({ Component, pageProps }: AppProps) {
             router.events.off('routeChangeComplete', pageview)
         }
     }, [router.events])
-  return (
-      <>
-          {/*Facebook Pixel*/}
-          <Script
-              id="fb-pixel"
-              type={"text/plain"}
-              className={"optanon-category-C0001-C0002-C0003-C0004"}
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                  __html: `
+    return (
+        <>
+            {/*Facebook Pixel*/}
+            <Script
+                id="fb-pixel"
+                type={"text/plain"}
+                className={"optanon-category-C0001-C0002-C0003-C0004"}
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
                             !function(f,b,e,v,n,t,s)
                             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -60,14 +60,14 @@ function MyApp({ Component, pageProps }: AppProps) {
                             'https://connect.facebook.net/en_US/fbevents.js');
                             fbq('init', ${FB_PIXEL_ID});
                           `,
-              }}
-          />
-          {/* Google Tag Manager - Global base code */}
-          <Script
-              id="gtag-base"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                  __html: `
+                }}
+            />
+            {/* Google Tag Manager - Global base code */}
+            <Script
+                id="gtag-base"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -100,11 +100,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                 });
           `,
 
-              }}
-          />
-          <Component {...pageProps} />
-      </>
-      )
+                }}
+            />
+            <Component {...pageProps} />
+        </>
+    )
 }
 
 export default appWithTranslation(MyApp, nextI18NextConfig);
