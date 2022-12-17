@@ -71,5 +71,9 @@
   "privacy-policy": "Política de privacidad",
   "send": "Enviar",
   "error-message": "Algo ha ido mal, vuelva a intentarlo",
-  "success-message": "Correo enviado correctamente, en breves nos pondremos en contacto contigo"
+  "success-message": "Correo enviado correctamente, en breves nos pondremos en contacto contigo",
+  "cookie-explanation": "Este sitio utiliza Cookies, puedes consultar la",
+  "cookie-question": "¿La aceptas?",
+  "accept-cookie": "Aceptar",
+  "decline-cookie": "Cancelar"
 }

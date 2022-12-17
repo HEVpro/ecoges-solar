@@ -53,5 +53,9 @@
   "privacy-policy": "Datenschutz-Bestimmungen",
   "send": "Schicken",
   "error-message": "Etwas ist schief gelaufen. Bitte versuche es erneut",
-  "success-message": "E-Mail korrekt gesendet, wir werden uns in Kürze mit Ihnen in Verbindung setzen"
+  "success-message": "E-Mail korrekt gesendet, wir werden uns in Kürze mit Ihnen in Verbindung setzen",
+  "cookie-explanation": "Diese Seite verwendet Cookies, die Sie überprüfen können",
+  "cookie-question": "Akzeptieren Sie es?",
+  "accept-cookie": "Akzeptieren",
+  "decline-cookie": "Abbrechen"
 }

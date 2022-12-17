@@ -54,5 +54,9 @@
   "privacy-policy": "Politique de confidentialité",
   "send": "Envoyer",
   "error-message": "Une erreur s'est produite. Veuillez réessayer",
-  "success-message": "E-mail envoyé correctement, nous vous contacterons sous peu"
+  "success-message": "E-mail envoyé correctement, nous vous contacterons sous peu",
+  "cookie-explanation": "Ce site utilise des Cookies, vous pouvez vérifier les",
+  "cookie-question": "L'acceptez-vous ?",
+  "accept-cookie": "Accepter",
+  "decline-cookie": "Annuler"
 }

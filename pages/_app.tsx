@@ -7,6 +7,7 @@ import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {GTM_ID, pageview} from '../lib/gtm'
 import {FB_PIXEL_ID} from "../lib/fbq"
+import CookieConsent from "../components/cookie-consent";
 
 function MyApp({Component, pageProps}: AppProps) {
     const router = useRouter()
@@ -103,6 +104,7 @@ function MyApp({Component, pageProps}: AppProps) {
                 }}
             />
             <Component {...pageProps} />
+            <CookieConsent/>
         </>
     )
 }

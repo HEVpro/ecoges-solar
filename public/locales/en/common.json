@@ -54,5 +54,9 @@
   "privacy-policy": "Privacy Policy",
   "send": "Send",
   "error-message": "Something went wrong, please try again",
-  "success-message": "Email sent correctly, we will contact you shortly"
+  "success-message": "Email sent correctly, we will contact you shortly",
+  "cookie-explanation": "This site uses Cookies, you can check the",
+  "cookie-question": "Do you accept it?",
+  "accept-cookie": "Accept",
+  "decline-cookie": "Cancel"
 }
